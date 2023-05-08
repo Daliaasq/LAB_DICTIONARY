@@ -19,8 +19,13 @@ else:
 rearranges the list so that the zeros are the end of the list, and finally returns the arranged list.'''
 
 def sorting(numbers_list :list):
-    numbers_list.sort()
-    return numbers_list
+    new_numbers_list = []
+    for number in numbers_list:
+        if number == 0:
+            new_numbers_list.append(0)
+        else:
+            new_numbers_list.insert(0, number)
+    return new_numbers_list
 
 unsorted_list = [5, 0, 34, 9, 0, 13, 8]
 print(f"The list after arrangment: {sorting(unsorted_list)}\n")
